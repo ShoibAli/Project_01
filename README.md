@@ -1,50 +1,55 @@
-# React + TypeScript + Vite
+# React Project Assignment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+This project is a React-based web application that demonstrates:
+- A **Counter Component** with animated background changes.
+- A **User Data Form** that collects user details and warns about unsaved changes.
+- A **Rich Text Editor** for displaying and formatting user data.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Built using React with TypeScript, the project leverages Material UI for the UI components, React Spring for smooth animations, React Router for navigation, and React Quill for the rich text editing experience.
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Counter Component
+- **Buttons:** Increment, Decrement, Reset.
+- **Animated Background:** Uses React Spring to smoothly animate the background height based on the counter value.
 
-- Configure the top-level `parserOptions` property like this:
+### User Data Form
+- **Form Fields:** Name, Address, Email, and Phone.
+- **User ID Generation:** Automatically creates a unique ID for each user.
+- **Data Persistence:** Saves user data to local storage (or RTK if configured).
+- **Unsaved Changes Warning:** Alerts users if they attempt to leave with unsaved changes.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### Rich Text Editor
+- **Formatting Options:** Supports bold, italic, underline, and list formatting.
+- **Data Persistence:** Content is saved locally, ensuring it persists across sessions.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### Optional Features (Planned/Implemented)
+- **User Authentication:** Google Sign-In with private/public route management.
+- **Dashboard Visualization:** Displays user profile data and trends using React Charts.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Built With
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Material UI](https://mui.com/)
+- [React Spring](https://www.react-spring.io/)
+- [React Router](https://reactrouter.com/)
+- [React Quill](https://github.com/zenoamaro/react-quill)
+- [uuid](https://www.npmjs.com/package/uuid)
+
+## Getting Started
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (version 14 or later)
+- npm (comes with Node.js) or yarn
+
+### Installation
+
+1. **Clone the Repository**
+
+   ```bash
+   git clone https://github.com/ShoibAli/Project_01.git
+   cd Project_01
